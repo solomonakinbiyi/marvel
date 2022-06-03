@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Marvel Fan Base</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body>
+    <div class="body__overlay">
+        <div class="form">
+            <div class="form__card lightmode--form" id="loginform">
+                <form id="loginformid">
+                    <img src="https://moneyinc.com/wp-content/uploads/2020/08/Marvel.jpg" alt="" class="form__card__logo">
+                    <input type="text" placeholder="email address" name="email" required>
+                    <input type="password" placeholder="password" name="psw" required>
+                    <a class="acnt__help" href="#">forgot your password?</a>
+                    <button>login</button>
+                    <p class="acnt__help" onclick="toggleForm(`loginform`)">create an account</p>
+                </form>
+            </div>
+
+            <div class="form__card lightmode--form" id="regform">
+                <form id="regformid">
+                    <img src="https://moneyinc.com/wp-content/uploads/2020/08/Marvel.jpg" alt=""
+                        class="form__card__logo">
+                    <input type="text" placeholder="Name" id="regformName" name="name" required>
+                    <input type="text" placeholder="email address" id="regformEml" name="email" required>
+                    <input type="password" placeholder="password" id="regformPsw" name="psw" required>
+                    <select name="chrnm" id="regformChrName" onchange="this.style.color = 'black'" required>
+                        <option value="">Favorite Character's Name</option>
+                        <option value="3-D Man">3-D Man</option>
+                        <option value="A-Bomb (HAS)">A-Bomb (HAS)</option>
+                        <option value="A.I.M.">A.I.M.</option>
+                        <option value="Aaron Stack">Aaron Stack</option>
+                    </select>
+                    <a class="acnt__help" href="#">forgot your password?</a>
+                    <button>Sign up</button>
+                    <a class="acnt__help" onclick="toggleForm(`regform`)">Login</a>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="module">
+        if (localStorage.getItem("session") !== null) {
+            window.location.replace("profile/");
+        }
+    </script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="sweetalert2.all.min.js"></script>
+    <script src="scripts/index.js"></script>
+    <script src="scripts/upload/register.js"></script>
+    <script src="scripts/validation/auth.js"></script>
+</body>
+
+</html>

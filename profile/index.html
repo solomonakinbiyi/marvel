@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="stylesheets/style.css">
+</head>
+
+<body class="bodylightmode">
+    <nav class="navlightmode">
+        <div class="nav__userinfo">
+            <span class="greeting">Good morning</span>
+            <div class="useridentifier">
+                <img src="http://i.annihil.us/u/prod/marvel/i/mg/c/e0/535fecbbb9784/portrait_xlarge.jpg" alt=""
+                    id="avt">
+                <span class="username"></span>
+            </div>
+        </div>
+        <div class="nav__logout">
+            <a href="../index.html" onclick="localStorage.removeItem('session');">Logout</a>
+        </div>
+    </nav>
+    <section>
+        <div class="main">
+            <h1>Characters</h1>
+            <div class="loading">loading...</div>
+            <div class="characterContainer">
+
+            </div>
+        </div>
+    </section>
+    <script type="module">
+        if (localStorage.getItem("session") === null) {
+            window.location.replace("../index.html");
+        }
+    </script>
+
+    <script src="../scripts/configuration/retrievedata.js" type="module"></script>
+</body>
+
+</html>

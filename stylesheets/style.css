@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  transition: 500ms;
+}
+
+/* global variables */
+:root {
+  --white: whitesmoke;
+  --fontcolor: #121212;
+  --shadow: 0px 0px 30px #ca000048;
+}
+
+/* theme */
+/* light theme configuration */
+.lightmode--form {
+  background-color: var(--white);
+  color: var(--fontcolor);
+}
+
+.lightmode--form input {
+  box-shadow: var(--shadow);
+}
+
+.lightmode--form select {
+  box-shadow: var(--shadow);
+}
+
+.lightmode--form .acnt__help {
+  color: var(--fontcolor);
+}
+
+.lightmode--form button {
+  background-color: #ca0000;
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.lightmode--form button:hover {
+  background-color: #d14646;
+}
+/* end of light theme configuration */
+
+/* dark theme configuration */
+.darkmode--form {
+  --white: #121212;
+  --fontcolor: whitesmoke;
+  background-color: var(--white);
+  color: var(--fontcolor);
+}
+
+.darkmode--form input {
+  --shadow: 0px 0px 30px #121212;
+  box-shadow: var(--shadow);
+}
+
+.darkmode--form select {
+  --shadow: 0px 0px 30px #121212;
+  box-shadow: var(--shadow);
+}
+
+.darkmode--form .acnt__help {
+  color: var(--fontcolor);
+}
+
+.darkmode--form button {
+  --shadow: 0px 0px 30px #121212;
+  background-color: #ca0000;
+  color: var(--white);
+  box-shadow: var(--shadow);
+}
+
+.darkmode--form button:hover {
+  background-color: #d14646;
+}
+/* end of light theme configuration */
+/* end theme */
+
+/* body section */
+body {
+  background-image: url(https://static2.srcdn.com/wordpress/wp-content/uploads/2021/11/Spider-Man--No-Way-Home-Trailer-Turned-Into-Epic-Multiverse-Poster-Art.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5);
+  background-size: cover;
+  background-position: center;
+  background-color: #121212;
+  animation-name: bodyanim;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+@keyframes bodyanim {
+  0% {
+    background-image: url(https://static2.srcdn.com/wordpress/wp-content/uploads/2021/11/Spider-Man--No-Way-Home-Trailer-Turned-Into-Epic-Multiverse-Poster-Art.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5);
+  }
+  30% {
+    background-image: url(https://variety.com/wp-content/uploads/2021/12/OSX1440_comp_v005_300DPI.1003-copy.jpg?w=681&h=383&crop=1);
+  }
+  70% {
+    background-image: url(https://insidethemagic.net/wp-content/uploads/2021/10/Disney-Cruise-Line-Named-Worlds-Best1.jpg);
+  }
+  100% {
+    background-image: url(https://static2.srcdn.com/wordpress/wp-content/uploads/2021/11/Spider-Man--No-Way-Home-Trailer-Turned-Into-Epic-Multiverse-Poster-Art.jpg?q=50&fit=crop&w=960&h=500&dpr=1.5);
+  }
+}
+/* end body */
+
+/* ovrl */
+.body__overlay {
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.589);
+  backdrop-filter: blur(1rem);
+  -webkit-backdrop-filter: blur(1rem);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: none;
+}
+/* end ovrl */
+
+#regform {
+  visibility: hidden;
+  position: absolute;
+  top: 15vh;
+  opacity: 0;
+}
+
+.form__card {
+  padding: 20px;
+  width: 350px;
+  border-radius: 10px;
+}
+
+.form__card form{
+    display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form__card__logo {
+  width: 100px;
+  margin-bottom: 30px;
+}
+
+.form__card input {
+  font-size: 1rem;
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 50px;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.form__card select {
+  font-size: 1rem;
+  padding: 10px 20px;
+  outline: none;
+  border-radius: 50px;
+  border: 0;
+  margin-bottom: 20px;
+}
+
+.acnt__help {
+  font-size: 1rem;
+  margin: 10px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+button {
+  font-size: 1rem;
+  padding: 10px 70px;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  color: whitesmoke !important;
+}
+
+#regformChrName {
+  color: gray;
+}
