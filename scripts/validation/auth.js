@@ -5,9 +5,17 @@ document.querySelector("#loginformid").addEventListener("submit", (e) => {
   const password = formData.get("psw");
   if (localStorage.getItem("user") !== null) {
     var user = JSON.parse(localStorage.getItem("user"));
+  } else {
+    Swal.fire({
+      position: "top-end",
+      icon: "error",
+      text: "User does not exist",
+      showConfirmButton: false,
+      timer: 3000,
+    });
   }
-  localStorage.setItem("session", "set");
   if (user.email === email && user.password === password) {
+    localStorage.setItem("session", "set");
     Swal.fire({
       position: "top-end",
       icon: "success",
