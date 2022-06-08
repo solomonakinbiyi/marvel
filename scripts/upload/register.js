@@ -18,6 +18,6 @@ document.querySelector("#regformid").addEventListener("submit", (e) => {
   });
   setTimeout(() => {
     window.history.replaceState(null, null, window.location.pathname);
-    window.location.replace("../../profile/");
+    window.location.replace("../../index.html");
   }, 900);
 });
